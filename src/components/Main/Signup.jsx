@@ -36,33 +36,17 @@ const Signup = () => {
 
                     <div>
                         <label
-                            htmlFor='location'
+                            htmlFor='email'
                             className='mb-1.5 text-sm font-medium'>
-                            Location
+                            Email address
                         </label>
                         <br />
                         <input
-                            id='location'
-                            type='text'
+                            id='email'
+                            type='email'
                             className='w-full px-3.5 py-2.5 rounded-lg bg-white border border-gray-350 shadow-sm shadow-[#101828]/[0.05]  placeholder:text-gray-550'
                             required
-                            placeholder='Enter your geo-location'
-                        />
-                    </div>
-
-                    <div>
-                        <label
-                            htmlFor='crops'
-                            className='mb-1.5 text-sm font-medium'>
-                            Crops
-                        </label>
-                        <br />
-                        <input
-                            id='crops'
-                            type='text'
-                            className='w-full px-3.5 py-2.5 rounded-lg bg-white border border-gray-350 shadow-sm shadow-[#101828]/[0.05]  placeholder:text-gray-550'
-                            required
-                            placeholder='Enter your type of crops'
+                            placeholder='Enter your email address'
                         />
                     </div>
 
@@ -75,6 +59,22 @@ const Signup = () => {
                         <br />
                         <input
                             id='password'
+                            type='password'
+                            className='w-full px-3.5 py-2.5 rounded-lg bg-white border border-gray-350 shadow-sm shadow-[#101828]/[0.05]  placeholder:text-gray-550'
+                            required
+                            placeholder='••••••••'
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor='confirmPassword'
+                            className='mb-1.5 text-sm font-medium'>
+                            Confirm Password
+                        </label>
+                        <br />
+                        <input
+                            id='confirmPassword'
                             type='password'
                             className='w-full px-3.5 py-2.5 rounded-lg bg-white border border-gray-350 shadow-sm shadow-[#101828]/[0.05]  placeholder:text-gray-550'
                             required
