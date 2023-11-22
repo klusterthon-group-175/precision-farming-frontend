@@ -31,7 +31,7 @@ const Header = () => {
 
                         <li>
                             <Link
-                                to='#'
+                                to='/'
                                 className='text-black tracking-[1.2px] font-impact text-2xl hover:text-green-550 active:text-green-550 focus:text-green-550 duration-500'>
                                 Team 175
                             </Link>
@@ -39,8 +39,8 @@ const Header = () => {
 
                         <li>
                             <Link
-                                to='#'
-                                className='md:inline hidden text-white bg-green-950 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-950 hover:text-green-550  active:bg-white active:border-green-950 active:text-green-550 focus:bg-white focus:border-green-950 focus:text-green-550 duration-500'>
+                                to='/create-account'
+                                className='md:inline hidden text-white bg-green-1000 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-1000 hover:text-green-550  active:bg-white active:border-green-1000 active:text-green-550 focus:bg-white focus:border-green-1000 focus:text-green-550 duration-500'>
                                 Get Predictions
                             </Link>
 
@@ -77,8 +77,8 @@ const Header = () => {
                                 </Link>
                             </li>
                             <Link
-                                to='#'
-                                className=' text-white bg-green-950 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-950 hover:text-green-550  active:bg-white active:border-green-950 active:text-green-550 focus:bg-white focus:border-green-950 focus:text-green-550 duration-500'>
+                                to='/create-account'
+                                className=' text-white bg-green-1000 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-1000 hover:text-green-550  active:bg-white active:border-green-1000 active:text-green-550 focus:bg-white focus:border-green-1000 focus:text-green-550 duration-500'>
                                 Get Predictions
                             </Link>
                         </ul>
