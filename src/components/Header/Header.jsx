@@ -1,14 +1,21 @@
-// import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { BsXCircle } from 'react-icons/bs';
+import { PropTypes } from 'prop-types';
 
-const Header = () => {
+const Header = ({ path }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    let bg;
+    if (path === '/') {
+        bg = 'bg-green-80';
+    } else {
+        bg = 'bg-white';
+    }
 
     return (
-        <header className='bg-green-80 border-b border-dark-900 text-dark-900 font-medium'>
+        <header
+            className={`border-b ${bg} border-dark-900 text-dark-900 font-medium`}>
             <div className='container sm:px-16 px-10 mx-auto py-5'>
                 <nav>
                     <ul className='flex justify-between items-center'>
@@ -17,14 +24,7 @@ const Header = () => {
                                 <Link
                                     className='hover:text-green-550 active:text-green-550 focus:text-green-550 duration-500'
                                     to='#'>
-                                    Resources
-                                </Link>
-                            </li>
-                            <li className='ml-8'>
-                                <Link
-                                    className='hover:text-green-550 active:text-green-550 focus:text-green-550 duration-500'
-                                    to='#'>
-                                    Get help
+                                    Give feedback
                                 </Link>
                             </li>
                         </div>
@@ -65,15 +65,7 @@ const Header = () => {
                                     onClick={() => setIsMenuOpen(false)}
                                     className='hover:text-green-550 active:text-green-550 focus:text-green-550 duration-500'
                                     to='#'>
-                                    Resources
-                                </Link>
-                            </li>
-                            <li className='mb-5'>
-                                <Link
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className='hover:text-green-550 active:text-green-550 focus:text-green-550 duration-500'
-                                    to='#'>
-                                    Get help
+                                    Give feedback
                                 </Link>
                             </li>
                             <Link
@@ -87,6 +79,10 @@ const Header = () => {
             </div>
         </header>
     );
+};
+
+Header.propTypes = {
+    path: PropTypes.string,
 };
 
 export default Header;
