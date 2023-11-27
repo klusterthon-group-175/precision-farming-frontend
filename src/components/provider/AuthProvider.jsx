@@ -1,4 +1,3 @@
-// AuthProvider.js
 import axios from 'axios';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
@@ -16,15 +15,21 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const updateAxiosHeaders = () => {
+            // updates access token and authorization bearer
             if (accessToken) {
                 axios.defaults.headers.common[
                     'Authorization'
                 ] = `Bearer ${accessToken}`;
                 localStorage.setItem('accessToken', accessToken);
-                localStorage.setItem('refreshToken', refreshToken);
             } else {
                 delete axios.defaults.headers.common['Authorization'];
                 localStorage.removeItem('accessToken');
+            }
+
+            // Update localStorage for refreshToken separately
+            if (refreshToken) {
+                localStorage.setItem('refreshToken', refreshToken);
+            } else {
                 localStorage.removeItem('refreshToken');
             }
         };

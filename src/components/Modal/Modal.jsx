@@ -17,6 +17,7 @@ const Modal = ({ setShow }) => {
     return (
         <section className='text-center text-neutral-gray-900 absolute inset-0 flex justify-center items-center bg-gray-750/70 backdrop-blur'>
             <article className='p-6 sm:min-w-[400px] min-w-[95%] bg-white rounded-xl shadow-modal'>
+                {/* Shoes loading animation */}
                 {showModal1 && (
                     <>
                         <h3 className='text-lg font-semibold sm:mb-8 mb-4'>
@@ -48,6 +49,7 @@ const Modal = ({ setShow }) => {
                     </>
                 )}
 
+                {/* Shows report modal */}
                 {showModal2 && (
                     <>
                         <img

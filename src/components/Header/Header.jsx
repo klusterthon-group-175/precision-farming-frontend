@@ -14,9 +14,11 @@ const Header = ({ path }) => {
     }
 
     return (
+        // Header
         <header
-            className={`border-b ${bg} border-dark-900 text-dark-900 font-medium`}>
+            className={`border-b ${bg} animate-fadeIn duration-500 border-dark-900 text-dark-900 font-medium`}>
             <div className='container sm:px-16 px-10 mx-auto py-5'>
+                {/* Navbar */}
                 <nav>
                     <ul className='flex justify-between items-center'>
                         <div className='md:flex md:justify-between md:items-center hidden'>
@@ -38,11 +40,13 @@ const Header = ({ path }) => {
                         </li>
 
                         <li>
-                            <Link
-                                to='/create-account'
-                                className='md:inline hidden text-white bg-green-1000 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-1000 hover:text-green-550  active:bg-white active:border-green-1000 active:text-green-550 focus:bg-white focus:border-green-1000 focus:text-green-550 duration-500'>
-                                Get Predictions
-                            </Link>
+                            <div>
+                                <Link
+                                    to='/create-account'
+                                    className='md:inline hidden border text-white bg-green-1000 border-green-1000 rounded-lg px-5 py-2  hover:bg-white hover:border-green-550 hover:text-green-550  active:bg-white active:border-green-550 active:text-green-550 focus:bg-white focus:border-green-550 focus:text-green-550 duration-500'>
+                                    Get Predictions
+                                </Link>
+                            </div>
 
                             <button
                                 className='inline md:hidden'
@@ -56,6 +60,7 @@ const Header = ({ path }) => {
                         </li>
                     </ul>
 
+                    {/* Mobile navbar dropdown */}
                     {isMenuOpen && (
                         <ul
                             id='mobileMenu'
@@ -70,7 +75,7 @@ const Header = ({ path }) => {
                             </li>
                             <Link
                                 to='/create-account'
-                                className=' text-white bg-green-1000 border-white rounded-lg px-5 py-2  hover:bg-white hover:border-green-1000 hover:text-green-550  active:bg-white active:border-green-1000 active:text-green-550 focus:bg-white focus:border-green-1000 focus:text-green-550 duration-500'>
+                                className=' text-white  border bg-green-1000 border-green-1000 rounded-lg px-5 py-2  hover:bg-white hover:border-green-550 hover:text-green-550  active:bg-white active:border-green-550 active:text-green-550 focus:bg-white focus:border-green-550 focus:text-green-550 duration-500'>
                                 Get Predictions
                             </Link>
                         </ul>

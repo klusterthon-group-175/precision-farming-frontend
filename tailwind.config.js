@@ -34,6 +34,75 @@ export default {
                     },
                 },
             },
+
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                },
+
+                bounceIn: {
+                    '0%': {
+                        transform: 'translateY(-500px)',
+
+                        animationTimingFunction: 'ease-in',
+                        opacity: 0,
+                    },
+                    '38%': {
+                        transform: ' translateY(0)',
+                        animationTimingFunction: 'ease-out',
+
+                        opacity: 1,
+                    },
+                    '55%': {
+                        transform: 'translateY(-65px)',
+
+                        animationTimingFunction: 'ease-in',
+                    },
+                    '72%': {
+                        transform: 'translateY(0)',
+
+                        animationTimingFunction: 'ease-out',
+                    },
+                    '81%': {
+                        transform: 'translateY(-28px)',
+
+                        animationTimingFunction: 'ease-in',
+                    },
+                    '90%': {
+                        transform: ' translateY(0)',
+
+                        animationTimingFunction: 'ease-out',
+                    },
+                    '95%': {
+                        transform: 'translateY(-8px)',
+
+                        animationTimingFunction: 'ease-in',
+                    },
+                    '100%': {
+                        transform: 'translateY(0)',
+
+                        animationTimingFunction: 'ease-out',
+                    },
+                },
+
+                slideIn: {
+                    '0%': {
+                        transform: 'translateZ(-1400px)',
+                        opacity: 0,
+                    },
+                    '100%': {
+                        transform: 'translateZ(0)',
+                        opacity: 1,
+                    },
+                },
+            },
+            animation: {
+                fadeIn: 'fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
+                bounceIn: 'bounceIn 1.1s both',
+                slideIn:
+                    'slideIn 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+            },
         },
     },
     plugins: [],
