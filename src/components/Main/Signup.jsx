@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
-import { PropTypes } from 'prop-types';
+import { useAuth } from '../provider/AuthProvider';
 
-const Signup = ({ setAuth }) => {
+const Signup = () => {
     const navigate = useNavigate();
-
+    const { setAccessToken, setRefreshToken } = useAuth();
+    setAccessToken(null);
+    setRefreshToken(null);
     const handleSubmit = async (values, { resetForm }) => {
         try {
             // eslint-disable-next-line no-unused-vars
@@ -18,14 +20,13 @@ const Signup = ({ setAuth }) => {
                 'http://127.0.0.1:8000/api/v1/auth/sign-up/',
                 values
             );
-            setAuth(true);
+
             enqueueSnackbar('Sign up successful', {
                 variant: 'success',
             });
-            navigate('/add-farm-data');
+            navigate('/login');
             resetForm(); // Reset form after successful submission if needed
         } catch (error) {
-            setAuth(false);
             enqueueSnackbar(
                 `${
                     error.response.data.data.email &&
@@ -233,10 +234,6 @@ const Signup = ({ setAuth }) => {
             </div>
         </section>
     );
-};
-
-Signup.propTypes = {
-    setAuth: PropTypes.func,
 };
 
 export default Signup;

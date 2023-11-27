@@ -4,13 +4,16 @@ import App from './App.jsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
+import AuthProvider from './components/provider/AuthProvider.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <SnackbarProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </SnackbarProvider>
+        <BrowserRouter>
+            <AuthProvider>
+                <SnackbarProvider>
+                    <App />
+                </SnackbarProvider>
+            </AuthProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );
