@@ -12,7 +12,7 @@ import Results from './components/Main/Results';
 
 function App() {
     const location = useLocation();
-    const baseURL = 'http://127.0.0.1:8000/api/v1'; //backend base url
+    const baseURL = 'http://precisionfarming.onrender.com'; //backend base url
     const [showModal, setShowModal] = useState(false);
 
     return (
